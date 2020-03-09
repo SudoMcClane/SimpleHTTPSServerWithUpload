@@ -1,15 +1,18 @@
-# SimpleHTTPServerWithUpload
-Simple HTTP Server With Upload written in Python.
+# SimpleHTTPSServerWithUpload
+Simple HTTPS Server With Upload written in Python.
 
-This script works with version 3.6.
-Earlier versions will causing runtime errors.
+Based on Alexander Gent's SimpleHTTPServerWithUpload:
+https://github.com/Tallguy297/SimpleHTTPServerWithUpload
 
-This is a modified version from the original source.
-https://gist.github.com/UniIsland/3346170
+## How to
 
-I have added icons for directory and videos.
-Pictures (BMP, GIF, JPG, PNG) will display thumbnails.
+* Go into the project directory
+	`cd /path/to/SimpleHTTPSServerWithUpload`
+* Generate an SSL certificate
+	`openssl req -x509 -newkey rsa:2048 -keyout ssl/key.pem -out ssl/cert.pem -days 365`
+* Go into the server's root directory
+	`cd srv/`
+* Launch the server
+	`python ../SimpleHTTPSServerWithUpload.py`
 
-This script also supports IP Address & Port binding.
-
-Thanks to dzmitry-rudnouski for your comments.
+_Don't forget your firewall rules_
